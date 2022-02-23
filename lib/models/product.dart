@@ -18,6 +18,9 @@ class Product {
     required this.title
   });
 
+}
+
+
   List<Product> products = [
     Product(
         id:1,
@@ -48,5 +51,3 @@ class Product {
     )
   ];
   
-
-}
