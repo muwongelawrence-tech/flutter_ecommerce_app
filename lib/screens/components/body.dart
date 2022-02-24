@@ -14,9 +14,9 @@ class Body extends StatelessWidget{
      return Column(
        crossAxisAlignment: CrossAxisAlignment.start,
 
-        children: const <Widget>[
+        children: <Widget>[
 
-            Padding(
+            const Padding(
               padding: EdgeInsets.symmetric(horizontal: kDefaultPadding), 
               child: Text(
               "women",
@@ -25,8 +25,23 @@ class Body extends StatelessWidget{
             ),
 
             
-            Categories(),
-            ItemCard(),
+            const Categories(),
+
+            Expanded(
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
+                child: GridView.builder(
+                 itemCount: products.length,
+                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                   crossAxisCount: 2,
+                   mainAxisSpacing: kDefaultPadding,
+                   crossAxisSpacing: kDefaultPadding,
+                   childAspectRatio: 0.65
+                  ), 
+                 itemBuilder: (context ,index) =>  const ItemCard(),
+                 ),
+              )
+            ),
            
 
           ],
@@ -36,10 +51,10 @@ class Body extends StatelessWidget{
 }
 
 class ItemCard extends StatelessWidget{
+  const ItemCard({Key? key}) : super(key: key);
 
   // final Product  product;
   // final Function press;
-  const ItemCard({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context){
