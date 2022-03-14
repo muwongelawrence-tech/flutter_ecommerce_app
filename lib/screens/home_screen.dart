@@ -14,6 +14,7 @@ class HomeScreen extends StatelessWidget{
           backgroundColor: Colors.white,
           elevation: 0,
           leading: IconButton(icon: SvgPicture.asset("assets/icons/back.svg"), onPressed: (){}),
+          
           actions: <Widget> [
            IconButton(
              icon: SvgPicture.asset("assets/icons/search.svg", color: kTextColor,),
@@ -25,6 +26,7 @@ class HomeScreen extends StatelessWidget{
           ),
 
           const SizedBox( width: kDefaultPadding / 2,)
+
           ]
         ),
 

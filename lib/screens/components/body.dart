@@ -20,10 +20,11 @@ class Body extends StatelessWidget{
 
             const Padding(
               padding: EdgeInsets.symmetric(horizontal: kDefaultPadding), 
+
               child: Text(
               "women",
                style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-            ),
+              ),
             ),
 
             
