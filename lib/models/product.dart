@@ -22,22 +22,24 @@ class Product {
 
 
   List<Product> products = [
+
     Product(
         id:1,
         title:"Bag 1",
         price:234,
         size: 12,
         description: "this is a good product.",
-        image:"assets/images/b1.jpg",
+        image:"assets/images/handbag2.png",
         color: const Color(0xFF3D82AE),
     ),
+
      Product(
         id:2,
         title:"Bag 2",
         price:300,
         size: 11,
         description: "this is a good product.",
-        image:"assets/images/b8.jpg",
+        image:"assets/images/handbag2.png",
         color: const Color(0xFF989493),
     ),
      Product(
@@ -46,7 +48,7 @@ class Product {
         price:234,
         size: 11,
         description: "this is a good product.",
-        image:"assets/images/b2.jpg",
+        image:"assets/images/handbag1.png",
         color: const Color(0xFFE6B398),
     ),
      Product(
@@ -55,7 +57,7 @@ class Product {
         price:234,
         size: 11,
         description: "this is a good product.",
-        image:"assets/images/b2.jpg",
+        image:"assets/images/handbag1.png",
         color: const Color(0xFFFB7883),
     ),
      Product(
@@ -64,7 +66,7 @@ class Product {
         price:234,
         size: 11,
         description: "this is a good product.",
-        image:"assets/images/b2.jpg",
+        image:"assets/images/handbag1.png",
         color: const Color(0xFFAEAEAE),
     ),
      Product(
@@ -73,16 +75,16 @@ class Product {
         price:234,
         size: 11,
         description: "this is a good product.",
-        image:"assets/images/b2.jpg",
+        image:"assets/images/handbag1.png",
         color: const Color(0xFFD3A984),
     ),
      Product(
         id:3,
-        title:"Bag 3",
-        price:234,
+        title:"Shoe",
+        price:311,
         size: 11,
         description: "this is a good product.",
-        image:"assets/images/b2.jpg",
+        image:"assets/images/s5.png",
         color: const Color(0xFF989493),
     ),
      Product(
@@ -91,7 +93,7 @@ class Product {
         price:234,
         size: 11,
         description: "this is a good product.",
-        image:"assets/images/b2.jpg",
+        image:"assets/images/handbag2.png",
         color: const Color(0xFF3D82AE),
     ),
   ];

@@ -21,11 +21,20 @@ class DetailsBody extends StatelessWidget{
         children: <Widget>[
 
             SizedBox(
+
               height: size.height,
+
               child:Stack(
+
                 children: <Widget>[
+
                    Container(
                      margin: EdgeInsets.only(top: size.height * 0.3),
+                     padding: EdgeInsets.only(
+                       top: size.height * 0.12 , 
+                       left : kDefaultPadding,
+                       right: kDefaultPadding,
+                     ),
                      height: 500,
                      decoration: const BoxDecoration(
                        color:Colors.white,
@@ -34,10 +43,54 @@ class DetailsBody extends StatelessWidget{
                          topRight: Radius.circular(24),
                        )
                      ),
+
+                      child: Column(
+                         children: <Widget>[
+                            
+                            Row(
+                              children: <Widget>[
+                                   Column(
+                                     children: <Widget>[ 
+                                       const Text("color"),
+
+                                       Container(
+                                         margin: const EdgeInsets.only(
+                                           top: kDefaultPadding / 4,
+                                           right: kDefaultPadding /2
+                                        ),
+                                         padding: const EdgeInsets.all(2.5),
+                                         height:24,
+                                         width:24,
+                                         decoration:BoxDecoration(
+                                           shape: BoxShape.circle,
+                                          border: Border.all(
+                                           color: const Color(0xFF356C95),
+                                        )),
+
+                                        child: const DecoratedBox(
+                                          decoration: BoxDecoration(
+                                            color: Color(0xFF356C95),
+                                            shape: BoxShape.circle,
+                                          ),
+                                        ),
+                                       )
+                                    ],
+                                   )
+                              ],
+                            ),
+
+                         ],
+                      )
+
                     
                    ),
+
+
+
                    Padding(
+
                      padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
+
                      child: Column(
                          crossAxisAlignment: CrossAxisAlignment.start,
                          children: <Widget>[
@@ -51,6 +104,8 @@ class DetailsBody extends StatelessWidget{
                                fontWeight: FontWeight.bold
                              )
                            ),
+
+                           const SizedBox(width: kDefaultPadding),
 
                            Row(
                              children: <Widget>[
@@ -68,9 +123,21 @@ class DetailsBody extends StatelessWidget{
                                         )
                                       ]
                                   )
-                                )
+                                ),
+
+                                 Expanded(
+                                    child: Image.asset(
+                                        product.image,
+                                        fit:BoxFit.fill,
+                                    ),
+                               ),
+
                              ],
-                           )
+                           ),
+
+                           const SizedBox(width: kDefaultPadding),
+
+                          
                         
                         ],
                      )
