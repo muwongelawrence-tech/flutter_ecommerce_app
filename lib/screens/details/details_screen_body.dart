@@ -176,27 +176,26 @@ class ColorDot extends StatelessWidget{
 
   @override
   Widget build(BuildContext context){
-    return Container(
+    return  Container(
+                      margin: const EdgeInsets.only(
+                      top: kDefaultPadding / 4,
+                      right: kDefaultPadding /2
+                      ),
+                      padding: const EdgeInsets.all(2.5),
+                      height:24,
+                      width:24,
+                      decoration:BoxDecoration(
+                          shape: BoxShape.circle,
+                          border: Border.all(
+                              color: isSelected ? color : Colors.transparent
+                          )),
 
-                                         margin: const EdgeInsets.only(
-                                           top: kDefaultPadding / 4,
-                                           right: kDefaultPadding /2
-                                        ),
-                                         padding: const EdgeInsets.all(2.5),
-                                         height:24,
-                                         width:24,
-                                         decoration:BoxDecoration(
-                                           shape: BoxShape.circle,
-                                           border: Border.all(
-                                           color: isSelected ? color : Colors.transparent
-                                        )),
-
-                                        child:  DecoratedBox(
-                                          decoration: BoxDecoration(
-                                            color: color,
-                                            shape: BoxShape.circle,
-                                          ),
-                                        ),
-                                       );
-  }
+                      child:  DecoratedBox(
+                          decoration: BoxDecoration(
+                                color: color,
+                                shape: BoxShape.circle,
+                          ),
+                      ),
+            );
+        }
 }
